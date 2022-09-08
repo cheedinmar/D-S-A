@@ -148,3 +148,33 @@
           * 
           * 0(n!) factorial- you are adding a loop for every element
          */
+
+         /**
+          * Space Complexity (memory)
+          * Variables
+          * Data Structures
+          * Function call
+          * Allocations
+          * these things take space
+          * 
+          * eg function boo(n){
+          *     for(let i =0; i < n.length; i++){
+          *         console.log('booo')
+          * }
+          * }
+          * the Big 0 for time complexity is 0(n)
+          * What is the big 0 for space complexity
+          * we are only adding one variable let i =0, this function has a big 0 for space complexity 0(1)
+          
+         eg2*/ function arrayOfHi(n){
+                let hiArray = [];
+                //we have created a new array and data structures takes space
+                for(let i=0; i<n; i++){
+                    hiArray[i]= 'hello'
+                    //this function just fills in hiArray with loops of hello,
+                    //so we ignore the constant time let i=0
+                }
+                return hiArray;
+         }
+         arrayOfHi(6)
+         /**The big 0 is 0(n) because we are creating a new data structures and adding memory so each item is an additional memory space in our computer */
