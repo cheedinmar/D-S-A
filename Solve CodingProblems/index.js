@@ -61,3 +61,41 @@
     //so we have two loops but they are not going to be nested therefore making it more efficient than our brute force approach
     //time complexity here is 0(a+b)
  }
+ /**
+  * step 9: modularize your code from the very beginning, break up your code into small piexes and write comments if you need to
+  * step 10: Start actually writiing your code. keep in mind that the more you prepare
+  */function containsCommonItems2(arr1, arr2){
+   let map ={};
+   for(let i=0; i < arr1.length; i++){
+      //loop through the first array and create object where properties === items on the array
+         if(!map[arr1[i]]){
+            const item = arr1[i]
+            map[item] = true
+         }
+         //loop through the second array and check if the item in the second array exists on created object
+         for (let j=0; j < arr2.length; j++){
+            if(map[arr2[j]]){
+               return true
+            }
+         }
+         return false
+   }
+   //This solution when it comes to time complexity is better
+
+    
+  }
+  /**step11: think about error checks and how you can break this code. Never make assumption about the input,
+   * how will you safe guard it
+   * 
+   * step 12: don't use bad confusing names like i and j. Write codes that reads well
+   * step 13: Text your code, check for no params, undefiined, null, massive arrays, async code
+   * step 14: Talk to the interviewer where you would improve the code. DOes it work, how can performance be improved, or make the code more readable
+   * 
+   * function containsCommonItems3(arr1, arr2){
+   *  return arr1.some(item => arr2.includes(item))
+   * }
+   * this solution is more concise, ask your interview what is more important to them
+   * so space complexity is 0(a) for this new solution. although it is faster in terms of time complexity, but it is heavier in terms of memory
+   * because we are creating a new map
+   * 
+  */
